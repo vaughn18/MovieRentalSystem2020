@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieRentalSystem2020", "MovieRentalSystem2020.csproj", "{9B57D60B-FB44-4914-9225-479436D27758}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D7ADFD30-2AA8-4E5A-862F-8A6A49675ACF}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieRentalSystemUnitTest2020", "..\MovieRentalSystemUnitTest2020\MovieRentalSystemUnitTest2020.csproj", "{6C09F0D2-53CE-433E-AB5E-DC8A1784FA67}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9B57D60B-FB44-4914-9225-479436D27758}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B57D60B-FB44-4914-9225-479436D27758}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B57D60B-FB44-4914-9225-479436D27758}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B57D60B-FB44-4914-9225-479436D27758}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C09F0D2-53CE-433E-AB5E-DC8A1784FA67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C09F0D2-53CE-433E-AB5E-DC8A1784FA67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C09F0D2-53CE-433E-AB5E-DC8A1784FA67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C09F0D2-53CE-433E-AB5E-DC8A1784FA67}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {527F5461-7485-4C55-B22B-EF212B284E7F}
+	EndGlobalSection
+EndGlobal
