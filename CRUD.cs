@@ -369,42 +369,49 @@ namespace MovieRentalSystem2020
         //Charge Customers different fee base on release year
         public string CostFee(string year, string cost)
         {
-
-            float finalCost = float.Parse(cost);
-
-            //sql query
-            string query = "UPDATE Movies SET Rental_Cost = @Cost";
-
-            float movieYear = Int32.Parse(year);
-
-            float currentYear = Int32.Parse(DateTime.Today.ToString("yyyy")) - 5000;
-
-            if (movieYear < currentYear)
+            //checks if year has a value or not
+            if (year == String.Empty)
             {
-                finalCost = 2;
+                return "Please add a year for the movie";
             }
             else
             {
-                finalCost = 5;
+                float finalCost = float.Parse(cost);
+
+                //sql query
+                string query = "UPDATE Movies SET Rental_Cost = @Cost";
+
+                float movieYear = Int32.Parse(year);
+
+                float currentYear = Int32.Parse(DateTime.Today.ToString("yyyy")) - 5000;
+
+                if (movieYear < currentYear)
+                {
+                    finalCost = 2;
+                }
+                else
+                {
+                    finalCost = 5;
+                }
+
+
+                // Define DB Connection
+                using (SqlCommand returnData = new SqlCommand(query, Connection))
+                {
+                    // Opens Connection to DB
+                    Connection.Open();
+
+                    //parameter assignment of values to avoid sql Injection
+                    returnData.Parameters.AddWithValue("@Cost", cost);
+
+                    // Executes SQL Command - Will return how many rows were effected
+                    int returnValue = returnData.ExecuteNonQuery();
+
+                    // Closes Connection to DB
+                    Connection.Close();
+                }
+                return "Customer has been charged $" + finalCost + ".00";
             }
-
-
-            // Define DB Connection
-            using (SqlCommand returnData = new SqlCommand(query, Connection))
-            {
-                // Opens Connection to DB
-                Connection.Open();
-
-                //parameter assignment of values to avoid sql Injection
-                returnData.Parameters.AddWithValue("@Cost", cost);
-
-                // Executes SQL Command - Will return how many rows were effected
-                int returnValue = returnData.ExecuteNonQuery();
-
-                // Closes Connection to DB
-                Connection.Close();
-            }
-            return "Customer has been charged $" + finalCost + ".00";
         }
     }
 }
