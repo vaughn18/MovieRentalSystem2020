@@ -82,9 +82,9 @@
             this.label17 = new System.Windows.Forms.Label();
             this.tbxDateReturned = new System.Windows.Forms.TextBox();
             this.pnlFilters = new System.Windows.Forms.Panel();
+            this.rbShowBorrowedMovies = new System.Windows.Forms.RadioButton();
             this.rbShowMostPopularMovies = new System.Windows.Forms.RadioButton();
             this.rbShowWhoBuysMost = new System.Windows.Forms.RadioButton();
-            this.rbShowBorrowedMovies = new System.Windows.Forms.RadioButton();
             this.label18 = new System.Windows.Forms.Label();
             this.tbctrlPopularMovies.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -642,10 +642,22 @@
             this.pnlFilters.Controls.Add(this.rbShowBorrowedMovies);
             this.pnlFilters.Controls.Add(this.rbShowMostPopularMovies);
             this.pnlFilters.Controls.Add(this.rbShowWhoBuysMost);
-            this.pnlFilters.Location = new System.Drawing.Point(491, 667);
+            this.pnlFilters.Location = new System.Drawing.Point(314, 667);
             this.pnlFilters.Name = "pnlFilters";
             this.pnlFilters.Size = new System.Drawing.Size(723, 50);
             this.pnlFilters.TabIndex = 14;
+            // 
+            // rbShowBorrowedMovies
+            // 
+            this.rbShowBorrowedMovies.AutoSize = true;
+            this.rbShowBorrowedMovies.Location = new System.Drawing.Point(487, 14);
+            this.rbShowBorrowedMovies.Name = "rbShowBorrowedMovies";
+            this.rbShowBorrowedMovies.Size = new System.Drawing.Size(233, 21);
+            this.rbShowBorrowedMovies.TabIndex = 1;
+            this.rbShowBorrowedMovies.TabStop = true;
+            this.rbShowBorrowedMovies.Text = "Show Movies currently borrowed";
+            this.rbShowBorrowedMovies.UseVisualStyleBackColor = true;
+            this.rbShowBorrowedMovies.CheckedChanged += new System.EventHandler(this.rbShowBorrowedMovies_CheckedChanged);
             // 
             // rbShowMostPopularMovies
             // 
@@ -670,18 +682,6 @@
             this.rbShowWhoBuysMost.Text = "Show Who borrows Most";
             this.rbShowWhoBuysMost.UseVisualStyleBackColor = true;
             this.rbShowWhoBuysMost.CheckedChanged += new System.EventHandler(this.rbShowWhoBuysMost_CheckedChanged);
-            // 
-            // rbShowBorrowedMovies
-            // 
-            this.rbShowBorrowedMovies.AutoSize = true;
-            this.rbShowBorrowedMovies.Location = new System.Drawing.Point(487, 14);
-            this.rbShowBorrowedMovies.Name = "rbShowBorrowedMovies";
-            this.rbShowBorrowedMovies.Size = new System.Drawing.Size(233, 21);
-            this.rbShowBorrowedMovies.TabIndex = 1;
-            this.rbShowBorrowedMovies.TabStop = true;
-            this.rbShowBorrowedMovies.Text = "Show Movies currently borrowed";
-            this.rbShowBorrowedMovies.UseVisualStyleBackColor = true;
-            this.rbShowBorrowedMovies.CheckedChanged += new System.EventHandler(this.rbShowBorrowedMovies_CheckedChanged);
             // 
             // label18
             // 

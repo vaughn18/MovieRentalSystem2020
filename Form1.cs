@@ -11,6 +11,7 @@ namespace MovieRentalSystem2020
         {
             InitializeComponent();
             LoadDB();
+            this.Text = "Movie Rental System 2020";
         }
 
         private void LoadDB()
